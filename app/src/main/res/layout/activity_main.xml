@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:weightSum="18"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/firstLayout"
+        android:layout_weight="6"
+        android:background="@color/colorLightGrey"
+        android:paddingTop="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/cityText"
+            android:textColor="@color/colorBlue"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_below="@+id/cityText"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorDarkGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_below="@id/dateText"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/colorLightGrey"
+            android:layout_width="120dp"
+            android:layout_height="80dp" />
+
+        <TextView
+            android:id="@+id/temperatureText"
+            android:textColor="@color/colorBlue"
+            android:textStyle="bold"
+            android:layout_below="@id/dateText"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/maxMinTempText"
+            android:textSize="20sp"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/temperatureText"
+            android:textColor="@color/colorDarkGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/conditionText"
+            android:textColor="@color/colorBlue"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_below="@id/weatherIcon"
+            android:layout_alignLeft="@+id/weatherIcon"
+            android:layout_alignStart="@+id/weatherIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/secondLayout"
+        android:layout_weight="4"
+        android:background="@color/colorDarkBlue"
+        android:paddingTop="15dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/windTextName"
+            android:text="@string/wind"
+            android:textSize="23sp"
+            android:textColor="@color/colorLightBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/windText"
+            android:textSize="23sp"
+            android:textColor="@color/colorGrey"
+            android:layout_alignTop="@+id/windTextName"
+            android:layout_alignLeft="@+id/pressureText"
+            android:layout_alignStart="@+id/pressureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/pressureTextName"
+            android:text="@string/pressure"
+            android:textSize="23sp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/windTextName"
+            android:textColor="@color/colorLightBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/pressureText"
+            android:textSize="23sp"
+            android:textColor="@color/colorGrey"
+            android:layout_alignTop="@+id/pressureTextName"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/humidityTextName"
+            android:text="@string/humidity"
+            android:textSize="23sp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/pressureTextName"
+            android:textColor="@color/colorLightBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/humidityText"
+            android:textSize="23sp"
+            android:textColor="@color/colorGrey"
+            android:layout_alignTop="@+id/humidityTextName"
+            android:layout_alignLeft="@+id/pressureText"
+            android:layout_alignStart="@+id/pressureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/cloudinessTextName"
+            android:text="@string/cloudiness"
+            android:textSize="23sp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/humidityTextName"
+            android:textColor="@color/colorLightBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/cloudinessText"
+            android:textSize="23sp"
+            android:textColor="@color/colorGrey"
+            android:layout_alignTop="@+id/cloudinessTextName"
+            android:layout_alignLeft="@+id/pressureText"
+            android:layout_alignStart="@+id/pressureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sunriseTextName"
+            android:text="@string/sunrise"
+            android:textSize="23sp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/cloudinessTextName"
+            android:textColor="@color/colorLightBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sunriseText"
+            android:textSize="23sp"
+            android:textColor="@color/colorGrey"
+            android:layout_alignTop="@+id/sunriseTextName"
+            android:layout_alignLeft="@+id/pressureText"
+            android:layout_alignStart="@+id/pressureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sunsetTextName"
+            android:text="@string/sunset"
+            android:textSize="23sp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/sunriseTextName"
+            android:textColor="@color/colorLightBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sunsetText"
+            android:textSize="23sp"
+            android:textColor="@color/colorGrey"
+            android:layout_alignTop="@+id/sunsetTextName"
+            android:layout_alignLeft="@+id/pressureText"
+            android:layout_alignStart="@+id/pressureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/updateText"
+            android:text="Updated"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/colorLightBlue"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/thirdLayout"
+        android:layout_weight="8"
+        android:paddingTop="1dp"
+        android:background="@color/colorLightBlue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/actionButtons"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/buttonForecastFor5days"
+                android:onClick="onClick5days"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorDarkBlue"
+                android:src="@drawable/calendar5"
+                android:tint="@color/colorLightBlue" />
+
+            <ImageButton
+                android:id="@+id/buttonForecastSoon"
+                android:onClick="onClickSoon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:background="@color/colorDarkBlue"
+                android:src="@drawable/today"
+                android:tint="@color/colorLightBlue" />
+
+            <ImageButton
+                android:id="@+id/buttonForecastTomorrow"
+                android:onClick="onClickTomorrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:background="@color/colorDarkBlue"
+                android:src="@drawable/tomorrow"
+                android:tint="@color/colorLightBlue" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
